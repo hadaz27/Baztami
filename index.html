@@ -3,27 +3,83 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baztami</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" src="style.css">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
 </head>
 
-<body class="bg-gradient-to-b from-[#CCCCFF] to-[#4F46E5]">
-    <div class="grid grid-rows-5">
-        <div class="row-span-4 bg-gradient-to-b from-[#4F46E5] to-[#8780FD] flex items-center justify-center">
+<body>
+    <div class="grid grid-rows-7 min-h-screen">
+        <div class="row-span-2 bg-gradient-to-b from-[#4F46E5] to-[#8780FD] flex items-center justify-center">
             <img src="images/mainlogo.png" alt="Baztami" width="50%" height="100%">
         </div>
-        <header class="row-span-1 bg-gradient-to-b from-[#8080FF] to-[#CCCCFF] text-center">
-            <ul class="flex gap-12 justify-center cursor-pointer">
-                <li style="text-decoration: underline white;">Home</li>
-                <li>About Us</li>
-                <li>Our Services</li>
-                <li>Contact</li>
-            </ul>
-        </header>
+        <div class="row-span-5 bg-gradient-to-t from-[#8080FF] to-[#CCCCFF]">
+            <div class="grid grid-cols-3 px-4 gap-2">
+                <div class="grid grid-rows-3 gap-2 justify-items-center mt-10">
+                    <div class="row-span-1 bg-[#4F4F4F] w-80 h-40 border-2 border-white rounded-lg">
+                        <p style="margin-left: 1em;">Checking account</p>
+                        <p style="margin-left: 1em;">008R676H342GSM0</p>
+                        <p style="margin-left: 0.8em;color: #00FF00;font-size: 1.6rem;">6,65DH<button
+                                class="bg-[#4955FF] ml-28 border-2 border-white rounded-full w-20 h-20"><img
+                                    class="ml-2" src="images/plus.svg" alt="PlusLogo"></button></p>
+                    </div>
+                    <div class="row-span-1 bg-[#4F4F4F] w-80 h-40 border-2 border-white rounded-lg">
+                        <p style="margin-left: 1em;">Total Incomes and Expanses</p>
+                        <div class="flex gap-12 justify-center mt-10">
+                            <div
+                                class="bg-[#02D302] w-1/3 h-20 border-2 border-white rounded-lg flex items-center justify-center">
+                                <p style="font-size: 1.5em;">+400DH</p>
+                            </div>
+                            <div
+                                class="bg-[#FF4E4E] w-1/3 h-20 border-2 border-white rounded-lg flex items-center justify-center">
+                                <p style="font-size: 1.5rem;">-200DH</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="row-span-1 bg-blue-600 w-60 h-10 border-2 border-white rounded-lg flex items-center justify-center">
+                        <button>Add an income or an expense</button>
+                    </div>
+                </div>
+                <div class="grid col-span-2 grid-rows-3 gap-2 mt-10 justify-items-center">
+                    <div class="row-span-2 bg-[#4F4F4F] w-full h-43 border-2 border-white rounded-lg">
+                        <div class="grid grid-rows-4 w-full h-full place-items-center">
+                            <div class="row-span-1 flex items-center justify-center text-2xl">Transaction Log</div>
+                            <div class="row-span-1 bg-[#02D302] border-2 border-white rounded-lg w-3/4 h-16 text-xl">
+                                <div class="grid grid-cols-4">
+                                    <div class="grid col-span-1" id="solde">
+                                        <p class="text-black">Le 22/10/2025</p>
+                                        <p>+300DH</p>
+                                    </div>
+                                    <div class="grid col-span-2">
+                                        <p class="text-black">Description :</p>
+                                        <p>Le salaire est rentré</p>
+                                    </div>
+                                    <div class="flex gap-4 justify-center">
+                                        <button><img class="w-10" src="images/edit.svg" alt="Edit"></button>
+                                        <button><img class="w-10" src="images/trash.svg" alt="Trash"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-span-1 bg-[#FF4E4E] border-2 border-white rounded-lg w-3/4 h-16"></div>
+                            <div class="row-span-1 bg-[#FF4E4E] border-2 border-white rounded-lg w-3/4 h-16"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="row-span-1 bg-blue-600 w-75% h-10 border-2 border-white rounded-lg flex justify-center items-center">
+                        <button>Show All Transactions</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="row-span-2 bg-amber-950">
+    </footer>
     </div>
 </body>
 
