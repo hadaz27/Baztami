@@ -23,7 +23,7 @@
             </div>
             <div class="row-span-1">
                 <label for="Description">Description :</label>
-                <textarea class ="rounded-lg w-1/2 h-24 text-black align-top p-2 text-xs border-2 border-black" type="text" id="description" placeholder="Enter a description" name="description" required></textarea>
+                <textarea id="description" class ="rounded-lg w-1/2 h-24 text-black align-top p-2 text-xs border-2 border-black" type="text" placeholder="Enter a description" name="description" required></textarea>
             </div>
             <div class="row-span-1">
                 <label class="ml-8" for="Amount">Amount :</label>
@@ -35,7 +35,7 @@
                     <input class="rounded-lg text-black ml-4 border-2 border-black" type="date" id="date" name="date" required>
                 </div>
             </div>
-            <button class="bg-[#4955FF] w-1/2 h-1.5em rounded-full border-2 border-white">Confirm
+            <button id="confirm_button" class="bg-[#4955FF] w-1/2 h-1.5em rounded-full border-2 border-white">Confirm
             </button>
         </div>
         <div class="row-span-2 bg-gradient-to-b from-[#4F46E5] to-[#8780FD] flex items-center justify-center">
@@ -77,10 +77,10 @@
                             <div class="row-span-1 bg-[#02D302] border-2 border-white rounded-lg w-3/4 h-16 text-xl">
                                 <div class="grid grid-cols-4">
                                     <div class="grid col-span-1" id="solde">
-                                        <p class="text-black">Le 22/10/2025</p>
+                                        <p class="text-black">Le </p>
                                         <p>+300DH</p>
                                     </div>
-                                    <div class="grid col-span-2">
+                                    <div class="grid col-span-2" id="log_description">
                                         <p class="text-black">Description :</p>
                                         <p>Le salaire est rentré</p>
                                     </div>
