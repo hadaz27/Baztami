@@ -10,7 +10,6 @@
     <script src="script.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-
 </head>
 
 <body>
@@ -21,24 +20,24 @@
             <button id="close_button"><img src="images/close.svg" alt="close"></button>
         </div>
         <div class="row-span-1">
-            <label for="Description">Description :</label>
+            <label for="description">Description :</label>
             <textarea id="description"
-                class="rounded-lg w-1/2 h-24 text-black align-top p-2 text-xs border-2 border-black" type="text"
+                class="rounded-lg w-1/2 h-24 text-black align-top p-2 text-xs border-2 border-black"
                 placeholder="Enter a description" name="description" required></textarea>
         </div>
         <div class="row-span-1">
-            <label class="ml-8" for="Amount">Amount :</label>
+            <label class="ml-8" for="amount">Amount :</label>
             <input class="rounded-lg w-1/2 text-black p-2 text-xs border-2 border-black" type="number" id="amount"
                 name="amount" placeholder="Enter the amount" required>
         </div>
         <div>
             <div class="row-span-1">
-                <label for="Enter the Date">Date :</label>
+                <label for="date">Date :</label>
                 <input class="rounded-lg text-black ml-4 border-2 border-black" type="date" id="date" name="date"
                     required>
             </div>
         </div>
-        <button id="confirm_button" class="bg-[#4955FF] w-1/2 h-1.5em rounded-full border-2 border-white"
+        <button id="confirm_income_button" class="bg-[#4955FF] w-1/2 h-1.5em rounded-full border-2 border-white"
             type="submit">Confirm
         </button>
     </form>
@@ -49,24 +48,24 @@
             <button id="close_button_expense"><img src="images/close.svg" alt="close"></button>
         </div>
         <div class="row-span-1">
-            <label for="Description">Description :</label>
+            <label for="expense_description">Description :</label>
             <textarea id="expense_description"
-                class="rounded-lg w-1/2 h-24 text-black align-top p-2 text-xs border-2 border-black" type="text"
+                class="rounded-lg w-1/2 h-24 text-black align-top p-2 text-xs border-2 border-black"
                 placeholder="Enter a description" name="description" required></textarea>
         </div>
         <div class="row-span-1">
-            <label class="ml-8" for="Amount">Amount :</label>
+            <label class="ml-8" for="expense_amount">Amount :</label>
             <input class="rounded-lg w-1/2 text-black p-2 text-xs border-2 border-black" type="number" id="expense_amount"
                 name="amount" placeholder="Enter the amount" required>
         </div>
         <div>
             <div class="row-span-1">
-                <label for="Enter the Date">Date :</label>
+                <label for="expense_date">Date :</label>
                 <input class="rounded-lg text-black ml-4 border-2 border-black" type="date" id="expense_date" name="date"
                     required>
             </div>
         </div>
-        <button id="confirm_button" class="bg-[#4955FF] w-1/2 h-1.5em rounded-full border-2 border-white"
+        <button id="confirm_expense_button" class="bg-[#4955FF] w-1/2 h-1.5em rounded-full border-2 border-white"
             type="submit">Confirm
         </button>
     </form>
@@ -77,19 +76,19 @@
             <button id="close_button_edit"><img src="images/close.svg" alt="close"></button>
         </div>
         <div class="row-span-1">
-            <label for="Description">New description :</label>
+            <label for="edit_description">New description :</label>
             <textarea id="edit_description"
-                class="rounded-lg w-1/2 h-24 text-black align-top p-2 text-xs border-2 border-black" type="text"
+                class="rounded-lg w-1/2 h-24 text-black align-top p-2 text-xs border-2 border-black"
                 placeholder="Enter a description" name="description" required></textarea>
         </div>
         <div class="row-span-1">
-            <label class="ml-8" for="Amount">New amount :</label>
+            <label class="ml-8" for="edit_amount">New amount :</label>
             <input class="rounded-lg w-1/2 text-black p-2 text-xs border-2 border-black" type="number" id="edit_amount"
                 name="amount" placeholder="Enter the amount" required>
         </div>
         <div>
             <div class="row-span-1">
-                <label for="Enter the Date">New date :</label>
+                <label for="edit_date">New date :</label>
                 <input class="rounded-lg text-black ml-4 border-2 border-black" type="date" id="edit_date" name="date"
                     required>
             </div>
@@ -98,9 +97,8 @@
             type="submit">Confirm
         </button>
     </form>
-    </div>
     <div class="row-span-2 bg-gradient-to-b from-[#4F46E5] to-[#8780FD] flex items-center justify-center">
-        <img src="images/mainlogo.png" alt="Baztami" width="50%" height="100%">
+        <img src="images/mainlogo.png" alt="Baztami" style="height:100px;">
     </div>
     <div class="row-span-5 bg-gradient-to-t from-[#8080FF] to-[#CCCCFF]">
         <div class="grid grid-cols-1 md:grid-cols-3 px-4 gap-2">
@@ -117,14 +115,14 @@
                             <p id="solde_positif"></p>
                         </div>
                         <div class="bg-[#FF4E4E] w-32 h-14 border-2 border-white rounded-lg flex items-center">
-                            <p id = "solde_negatif">-200DH</p>
+                            <p id="solde_negatif">-200DH</p>
                         </div>
                     </div>
                 </div>
                 <div class="flex row-span-1 gap-12">
                     <button id="add_income_button" class="bg-[#02D302] h-8 w-32 rounded-lg border-2 border-white">Add
                         an income</button>
-                    <button id = "add_expense_button" class="bg-[#FF4E4E] h-8 w-32 rounded-lg border-2 border-white">Add an expense</button>
+                    <button id="add_expense_button" class="bg-[#FF4E4E] h-8 w-32 rounded-lg border-2 border-white">Add an expense</button>
                 </div>
             </div>
             <div class="grid col-span-2 grid-rows-3 gap-2 mt-10 justify-items-center">
@@ -153,11 +151,8 @@
             </div>
         </div>
     </div>
-    </div>
-    </div>
     <footer class="row-span-2 bg-amber-950">
     </footer>
-    </div>
 </body>
 
 </html>
