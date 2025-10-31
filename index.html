@@ -15,7 +15,7 @@
 
 <body>
     <form id="add_income_popup"
-        class="grid grid-rows-5 bg-[#4F4F4F] w-1/3 h-2/3 gap-2 place-items-center hidden fixed rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        class="grid grid-rows-5 bg-[#4F4F4F] w-2/3 h-2/3 gap-2 place-items-center hidden fixed rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <div class="flex justify-between items-center w-full px-4">
             <p class="underline flex-1 text-center">Add an income</p>
             <button id="close_button"><img src="images/close.svg" alt="close"></button>
@@ -43,7 +43,7 @@
         </button>
     </form>
     <form id="add_expense_popup"
-        class="grid grid-rows-5 bg-[#4F4F4F] w-1/3 h-2/3 gap-2 place-items-center hidden fixed rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        class="grid grid-rows-5 bg-[#4F4F4F] w-2/3 h-2/3 gap-2 place-items-center hidden fixed rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <div class="flex justify-between items-center w-full px-4">
             <p class="underline flex-1 text-center">Add an expense</p>
             <button id="close_button_expense"><img src="images/close.svg" alt="close"></button>
@@ -103,7 +103,7 @@
         <img src="images/mainlogo.png" alt="Baztami" width="50%" height="100%">
     </div>
     <div class="row-span-5 bg-gradient-to-t from-[#8080FF] to-[#CCCCFF]">
-        <div class="grid grid-cols-3 px-4 gap-2">
+        <div class="grid grid-cols-1 md:grid-cols-3 px-4 gap-2">
             <div class="grid grid-rows-3 gap-2 justify-items-center mt-10">
                 <div class="row-span-1 bg-[#4F4F4F] w-80 h-40 border-2 border-white rounded-lg">
                     <p style="margin-left: 1em;">Checking account</p>
@@ -122,13 +122,13 @@
                     </div>
                 </div>
                 <div class="flex row-span-1 gap-12">
-                    <button id="add_income_button" class="bg-blue-600 h-8 w-32 rounded-lg border-2 border-white">Add
+                    <button id="add_income_button" class="bg-[#02D302] h-8 w-32 rounded-lg border-2 border-white">Add
                         an income</button>
-                    <button id = "add_expense_button" class="bg-blue-600 h-8 w-32 rounded-lg border-2 border-white">Add an expense</button>
+                    <button id = "add_expense_button" class="bg-[#FF4E4E] h-8 w-32 rounded-lg border-2 border-white">Add an expense</button>
                 </div>
             </div>
             <div class="grid col-span-2 grid-rows-3 gap-2 mt-10 justify-items-center">
-                <div class="row-span-2 bg-[#4F4F4F] w-full border-2 border-white rounded-lg px-4 py-2">
+                <div class="row-span-2 bg-[#4F4F4F] w-full h-full border-2 border-white rounded-lg px-4 py-2">
                     <div class="flex items-center justify-center text-2xl font-semibold underline mb-3">Transaction Log
                     </div>
                     <div id="transaction_container"
@@ -137,7 +137,7 @@
                     </div>
                 </div>
                 <div
-                    class="row-span-1 bg-blue-600 w-75% h-10 border-2 border-white rounded-lg flex justify-center items-center">
+                    class="row-span-1 bg-blue-600 w-auto h-10 border-2 border-white rounded-lg flex justify-center items-center">
                     <button id="show_all_button">Show All Transactions</button>
                 </div>
                 <div id="show_all_popup"
