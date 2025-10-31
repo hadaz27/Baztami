@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <form id="add_popup"
+    <form id="add_income_popup"
         class="grid grid-rows-5 bg-[#4F4F4F] w-1/3 h-2/3 gap-2 place-items-center hidden fixed rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <div class="flex justify-between items-center w-full px-4">
             <p class="underline flex-1 text-center">Add an income</p>
@@ -42,6 +42,62 @@
             type="submit">Confirm
         </button>
     </form>
+    <form id="add_expense_popup"
+        class="grid grid-rows-5 bg-[#4F4F4F] w-1/3 h-2/3 gap-2 place-items-center hidden fixed rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div class="flex justify-between items-center w-full px-4">
+            <p class="underline flex-1 text-center">Add an expense</p>
+            <button id="close_button"><img src="images/close.svg" alt="close"></button>
+        </div>
+        <div class="row-span-1">
+            <label for="Description">Description :</label>
+            <textarea id="description"
+                class="rounded-lg w-1/2 h-24 text-black align-top p-2 text-xs border-2 border-black" type="text"
+                placeholder="Enter a description" name="description" required></textarea>
+        </div>
+        <div class="row-span-1">
+            <label class="ml-8" for="Amount">Amount :</label>
+            <input class="rounded-lg w-1/2 text-black p-2 text-xs border-2 border-black" type="number" id="amount"
+                name="amount" placeholder="Enter the amount" required>
+        </div>
+        <div>
+            <div class="row-span-1">
+                <label for="Enter the Date">Date :</label>
+                <input class="rounded-lg text-black ml-4 border-2 border-black" type="date" id="date" name="date"
+                    required>
+            </div>
+        </div>
+        <button id="confirm_button" class="bg-[#4955FF] w-1/2 h-1.5em rounded-full border-2 border-white"
+            type="submit">Confirm
+        </button>
+    </form>
+    <form id="edit_popup"
+        class="grid grid-rows-5 bg-[#4F4F4F] w-1/3 h-2/3 gap-2 place-items-center hidden fixed rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div class="flex justify-between items-center w-full px-4">
+            <p class="underline flex-1 text-center">Edit a transaction</p>
+            <button id="close_button"><img src="images/close.svg" alt="close"></button>
+        </div>
+        <div class="row-span-1">
+            <label for="Description">New description :</label>
+            <textarea id="expense_description"
+                class="rounded-lg w-1/2 h-24 text-black align-top p-2 text-xs border-2 border-black" type="text"
+                placeholder="Enter a description" name="description" required></textarea>
+        </div>
+        <div class="row-span-1">
+            <label class="ml-8" for="Amount">New amount :</label>
+            <input class="rounded-lg w-1/2 text-black p-2 text-xs border-2 border-black" type="number" id="expense_amount"
+                name="amount" placeholder="Enter the amount" required>
+        </div>
+        <div>
+            <div class="row-span-1">
+                <label for="Enter the Date">New date :</label>
+                <input class="rounded-lg text-black ml-4 border-2 border-black" type="date" id="expense_date" name="date"
+                    required>
+            </div>
+        </div>
+        <button id="edit_confirm_button" class="bg-[#4955FF] w-1/2 h-1.5em rounded-full border-2 border-white"
+            type="submit">Confirm
+        </button>
+    </form>
     </div>
     <div class="row-span-2 bg-gradient-to-b from-[#4F46E5] to-[#8780FD] flex items-center justify-center">
         <img src="images/mainlogo.png" alt="Baztami" width="50%" height="100%">
@@ -52,9 +108,7 @@
                 <div class="row-span-1 bg-[#4F4F4F] w-80 h-40 border-2 border-white rounded-lg">
                     <p style="margin-left: 1em;">Checking account</p>
                     <p style="margin-left: 1em;">008R676H342GSM0</p>
-                    <p style="margin-left: 0.8em;color: #00FF00;font-size: 1.6rem;">6,65DH<button
-                            class="bg-[#4955FF] ml-28 border-2 border-white rounded-full w-20 h-20"><img class="ml-2"
-                                id="add_button" src="images/plus.svg" alt="PlusLogo"></button></p>
+                    <p id="balance" style="margin-left: 0.8em;color: #00FF00;font-size: 1.6rem;margin-top:24px;"></p>
                 </div>
                 <div class="row-span-1 bg-[#4F4F4F] w-80 h-40 border-2 border-white rounded-lg place-items-center">
                     <p style="margin-left: 1em;">Total Incomes and Expanses</p>
@@ -74,19 +128,17 @@
                 </div>
             </div>
             <div class="grid col-span-2 grid-rows-3 gap-2 mt-10 justify-items-center">
-                <div class="row-span-2 bg-[#4F4F4F] w-full border-2 border-white rounded-lg">
-                    <div class="grid grid-rows-4 w-full max-h-96 place-items-center">
-                        <div class="row-span-1 flex items-center justify-center text-2xl underline">Transaction Log
-                        </div>
-                        <div id="transaction_container" class="flex flex-col w-full items-center gap-4">
-
-                        </div>
-                        <!-- cartes injectées dynamiquement avec js -->
+                <div class="row-span-2 bg-[#4F4F4F] w-full border-2 border-white rounded-lg px-4 py-2">
+                    <div class="flex items-center justify-center text-2xl font-semibold underline mb-3">Transaction Log
+                    </div>
+                    <div id="transaction_container"
+                        class="flex flex-col w-full items-center gap-4 max-h-96 overflow-y-auto">
+                        <!-- cartes injectées dynamiquement -->
                     </div>
                 </div>
-                <div id="show_all_button"
+                <div
                     class="row-span-1 bg-blue-600 w-75% h-10 border-2 border-white rounded-lg flex justify-center items-center">
-                    <button>Show All Transactions</button>
+                    <button id="show_all_button">Show All Transactions</button>
                 </div>
                 <div id="show_all_popup"
                     class="bg-[#4F4F4F] w-2/3 border-2 border-white rounded-lg gap-2 place-items-center hidden fixed rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-y-auto max-h-[80vh]">
@@ -100,6 +152,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     </div>
     <footer class="row-span-2 bg-amber-950">
